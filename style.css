@@ -62,7 +62,10 @@ a:hover{
 
 }
 
-img#banner{
+picture#banner > source{
+    width: 100%;
+}
+picture#banner > img {
     width: 100%;
     /*box-shadow:  0px -10px 25px  rgba(0, 0, 0, 0.637);*/
 }

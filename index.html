@@ -26,7 +26,12 @@
             <li><a href="#contatos">Contato</a></li>
         </ul>
     </header>
-    <img id="banner" src="imagens/banner1p.jpg" alt="">
+    <picture id="banner">
+        <source media="(min-width: 150px)" srcset="imagens/banner2-m.jpg" type="image/jgp">
+        <source media="(max-width: 500px)" srcset="imagens/banner2-p.jpg" type="image/jpg">
+        <img src="imagens/banner2-g.jpg" alt="">
+    </picture>
+    
 
     <!--Serviços-->
 
