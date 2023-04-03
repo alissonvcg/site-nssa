@@ -111,7 +111,16 @@ h2 {
     color: var(--cor2);
     
 }
+
 h1{
+    font-family: var(--fonte-destaque);
+    color: var(--cor3);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h1#sobre{
     font-size: 30px;
     margin-bottom: 20px;
     text-align: end;
