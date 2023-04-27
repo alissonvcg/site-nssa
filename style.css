@@ -15,6 +15,10 @@
 
 }
 
+a{
+    text-decoration: ;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -32,7 +36,7 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.637);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.637);
     
 }
 
@@ -44,17 +48,96 @@ img#logotipo {
     
 }
 
-li{
+h2 {
+    font-family: var(--fonte-destaque);
+    color: var(--cor4);
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+img#logotipologin {
+    width: 90px;
+    height: 90px;
+    margin: -15px;
+    margin-left: 4px;
+}
+
+.login{
+    position: absolute;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    border: #2B3120;
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.login > h1{
+    font-family: var(--fonte-destaque);
+    color: var(--cor3);
+    text-align: left;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.inp_login{
+    width: 300px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: white;
+    border: #2B3120;
+    border-style: solid;
+    border-radius: 8px;
+    border-width: 1px;
+}
+
+.botao_login{
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: var(--cor0);
+    color: white;
+    font-weight: bold;
+    font-family: var(--fonte-padrao);
+    border-radius: 20px;
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login > p {
+    font: var(--fonte-padrao);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.login > p#a {
+    font: var(--fonte-padrao);
+    margin: 0px;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+.menu-inicial {
     display: inline-block;
     margin: 4px;
 }
-a{
+.cabecalho {
     font-size: 15px;
     text-decoration: none;
     color: white;
     text-transform: uppercase;
-    padding: 10px 15px;
-    border-radius: 10px;
    
 }
 .cabecalho:hover{
@@ -70,13 +153,6 @@ picture#banner > img {
     /*box-shadow:  0px -10px 25px  rgba(0, 0, 0, 0.637);*/
 }
 
-h2 {
-    font-family: var(--fonte-destaque);
-    color: var(--cor4);
-    margin-top: 30px;
-    margin-bottom: 10px;
-    text-align: center;
-}
 
 .container{
     display: flex;
@@ -175,3 +251,138 @@ footer >  p {
     color: var(--cor2);
     font-weight: bold;
 }
+
+.quero{
+    background-color: rgb(0, 109, 0);
+    color: white;
+    font: var(--fonte-padrao);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.quero:hover{
+    transform: scale(1.10);
+}
+
+
+/* Nav principal */
+.nav-usuario{ 
+    backdrop-filter: blur(px);
+    border-right-style: solid;
+    border-right-width: 1px;
+    width: 150px;
+    height: 100vh;
+    left: -350px;
+    position: absolute;
+    transition: all .5s;
+}
+
+
+
+/*Icone*/
+.nav-usuario > ul > a > li > i{ 
+    padding-right: 15px;
+}
+
+
+/*Lista nao ordenada*/
+.nav-usuario > ul{
+    top: 40px;
+    position: absolute;
+    width: 100%;
+}
+
+/*Link*/
+.nav-usuario> ul > a{
+    text-align: center;
+    color: var(--cor5);
+    text-decoration: none;
+    display: block;
+    padding: 20px 5px;
+    position: relative;
+
+}
+
+/*link after*/
+.nav-usuario> ul > a:after{
+   background: none repeat scroll 0 0 transparent;
+   bottom: 0;
+   content: "";
+   display: block;
+   height: 1px;
+   left: 50%;
+   position: absolute;
+   background-color: black;
+   transition: width 0.3s ease 0s, left 0.3s ease 0s;
+   width: 0;
+}
+
+/*link hover*/
+.nav-usuario> ul > a:hover:after{
+    width: 100%;
+    left: 0;   
+}
+
+
+label#ml{
+    font-size: 30px;
+    position: absolute;
+    z-index: 1;
+}
+
+input#chec[type="checkbox"]{
+    display: none;
+}
+
+input#chec[type="checkbox"]:checked ~ nav{
+    transform: translateX(350px);
+}
+
+.logo-flutuante{
+    position: absolute;
+    width: 25%;
+    background-color: var(--cor0);
+    top: 2%;
+    left: 75%;
+    border-radius: 20px 0px 0px 20px ;
+}
+
+.logo-flutuante > a{
+    display: block;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.whatsapp-flutuante{
+    font-family: var(--fonte-padrao);
+    position: absolute;
+    left: 59%;
+    top: 5%;
+    border-bottom-style: solid;
+    border-color: black;
+}
+
+.whatsapp-flutuante > a > i{
+    padding-right:8px;
+    font-size: 25px;
+}
+
+.whatsapp-flutuante > a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: #a4c639 ;
+    padding: 23px 20px 23px 20px ;
+    border-radius: 20px;
+    
+}
+
+
